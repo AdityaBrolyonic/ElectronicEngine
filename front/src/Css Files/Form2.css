@@ -1,0 +1,139 @@
+
+.Log
+{ 
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url(../Images/reg\ form.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 100vh;
+    width: 100vw;
+
+   
+}
+
+.LForm
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: "Tahoma";
+    background-color: rgba(41, 39, 39, 0.3);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 30px black;
+    height: 90%;
+    width: 40%;
+}
+
+.Lfirst
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 15%;
+    width: 100%;
+
+    color: #fabe18;
+    font-size: 35px;
+    font-weight: 500;
+
+}
+
+.LSecond
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-between;
+
+    height: 55%;
+    width: 100%;
+}
+.LSecondA
+{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100%;
+    width: 80%;
+}
+
+.LThird
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    height: 30%;
+    width: 100%;
+}
+
+.Linput
+{
+    width: 100%;
+    height: 12%;
+    color: rgb(255, 255, 255);
+    font-size: 100%;
+    border: 0;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    outline: 0;
+    background: transparent;
+    transition: border-bottom 0.06s;
+}
+
+.Linput:focus
+{
+    border-bottom: 2px solid white;
+}
+.Linput::placeholder
+{
+    color: white;
+    position: absolute;
+    padding: 7px 0;
+    transition: 0.2s;
+}
+.Linput:focus::placeholder
+{
+    color: white;
+    position: absolute;
+    padding: 0;
+    top: 0;
+    font-size: 60%;
+    font-weight: 600;
+}
+
+.rbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 300px;
+    height: 40px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    border-radius: 10px;
+    
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    overflow-x: hidden;
+    }
+
+     .rbtn:hover
+    {
+        border: 2px solid white;
+    }  
+
+    .click
+    {
+        color: white;
+        text-decoration: none;
+    }

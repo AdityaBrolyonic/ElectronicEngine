@@ -1,0 +1,133 @@
+.Footer
+{   
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: rgb(20, 20, 20);
+    bottom: 0;
+    z-index: 16;
+}
+
+.Foot
+{
+    
+    height: 70%;
+    width: 95%; 
+    background-color: rgb(20, 20, 20);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.fheading
+{
+    color: white;
+    font-size: 18px;
+    font-family: "Tahoma";
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+.h
+{
+    color: white;
+    font-size: 18px;
+    font-family: "Tahoma";
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+
+}
+.fLogo{
+    height: 60%;
+    width: 40%; 
+}
+
+.data
+{
+    font-size: 18px;
+    font-family: "Tahoma";
+    height: 75%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+}
+.d
+{
+    color: rgb(155, 155, 155);
+    font-size: 16px;
+    font-family: "Tahoma";
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+
+}
+.fNavbar
+{
+    color: rgb(155, 155, 155);
+    font-size: 16px;
+    text-decoration: none;
+    font-family: "Tahoma";
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+}
+.flink
+{   
+    color: rgb(155, 155, 155);
+    font-size: 16px;
+    text-decoration: none;
+    font-family: "Tahoma";
+}
+.flink:hover
+{   
+    color: rgb(250, 190, 24);
+}
+
+.follow
+{
+    color: rgb(155, 155, 155);
+    font-size: 16px;
+    text-decoration: none;
+    font-family: "Tahoma";
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.copyright
+{
+    margin-top: 4%;
+    height: 10%;
+    width: 95%; 
+    background-color: rgb(20, 20, 20);
+    color: rgb(155, 155, 155);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border-top-style: solid;
+    border-color: rgb(155, 155, 155);
+    border-width: 0.1px;
+}
