@@ -109,7 +109,7 @@ app.post("/userLogin", (req, res) =>
           {
             req.session.user = result;
             console.log(req.session.user);
-            res.send(result)
+            res.send(result);
           }
           else {res.send({message : "wrong email/password combination!"});}
           })

@@ -13,13 +13,16 @@ import Axios from "axios";
 
 function Header({loggedIn, onLogout, name}) {
 
+  const isLoggedIn = localStorage.getItem('refreshToken');
 
   Axios.defaults.withCredentials = true;
 
   const userLogout = (e) => {
     e.preventDefault();
 
-    Axios.post("http://localhost:3001/userLogout").then((response) => {window.location.href = "/";})
+    Axios.post("http://localhost:3001/userLogout").then((response) => {
+      localStorage.removeItem('refreshToken');
+      window.location.href = "/";})
   }
   
 
@@ -30,7 +33,7 @@ function Header({loggedIn, onLogout, name}) {
      <img src={logo} height="100%" width="100%" alt='logo'/>
      </Link>
 
-    {loggedIn ?       
+    {loggedIn && isLoggedIn ?       
     (
       <>
           <div className='links'>

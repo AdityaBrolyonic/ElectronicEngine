@@ -20,7 +20,9 @@ e.preventDefault();
     Axios.post("http://localhost:3001/userLogin", {
       password : password,
       email:email,
-    }).then((response) => {window.location.href = "/";})
+    }).then((response) => {
+      localStorage.setItem('refreshToken', true);
+      window.location.href = "/"; })
   }
 
 

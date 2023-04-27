@@ -9,6 +9,7 @@ import Addpro from "./Components/Addpro";
 import ContactUs from './Components/ContactUs';
 import ShowProduct from './Components/ShowProduct';
 import Collections from './Components/Collections';
+import ProductCard from './Components/ProductCard';
 import { useState, useEffect } from 'react';
 import ClockLoader from "react-spinners/ClockLoader";
 import "./App.css"
@@ -18,7 +19,6 @@ function App() {
  const [ loading, setLoading] = useState(false);
  const [loginStatus, setLoginStatus] = useState(false);
  const [loggedIn, setLoggedIn] = useState(false);
-
   useEffect( () => {
     setLoading(true)
     setTimeout(() => {
@@ -38,6 +38,7 @@ function App() {
 
   const userLogout = () => {
     setLoggedIn(false);
+    localStorage.removeItem('refreshToken');
   };
 
   return (
@@ -59,7 +60,8 @@ function App() {
     <Route path="/Addpro" exec element={<Addpro />} /> 
     <Route path="/Registration" exec element={<Registration />} /> 
     <Route path="/Collection" exec element={<Collections />} /> 
-    <Route path="/ShowProduct" exec element={<ShowProduct />} /> 
+    <Route path="/ShowProduct" exec element={<ShowProduct loggedIn={loggedIn} onLogout={userLogout}/>}/> 
+    <Route path="/ProductCard" exec element={<ProductCard />} loggedIn={loggedIn} onLogout={userLogout}/> 
     <Route path='/Contact' exec element={<ContactUs/>}/>
     <Route path='/Login' exec element={<Login/>}/>
   </Routes>
