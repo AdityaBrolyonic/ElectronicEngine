@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require('path');
 
 const bodyParser = require("body-parser");
 const session = require("express-session");
@@ -109,7 +110,7 @@ app.post("/userLogin", (req, res) =>
           {
             req.session.user = result;
             console.log(req.session.user);
-            res.send(result);
+            res.send(req.session.user);
           }
           else {res.send({message : "wrong email/password combination!"});}
           })
@@ -129,9 +130,10 @@ app.post("/userLogin", (req, res) =>
 
 //Products------------------------------------------------------------------------------------------------------------------------
 
+app.use(express.static(path.join(__dirname, 'public')))
+
   app.post("/showProducts" , (req,res) =>
   {
-
     const category = req.body.name
     db.query("Select * from product where P_Category = ?",
     [category], (err, result) => {
@@ -139,9 +141,26 @@ app.post("/userLogin", (req, res) =>
       {
         console.log(err);
       }
-      else{res.send(result);}
+      else{ res.send(result); }
     })
   })
+
+  // app.post("/showProductImage" , (req,res) =>
+  // {
+  //   const category = req.body.name
+  //   db.query("Select * from product where P_Category = ?",
+  //   [category], (err, result) => {
+  //     if(err)
+  //     {
+  //       console.log(err);
+  //     }
+  //     else{
+  //       const imageName = result[0].P_Image;
+  //       res.send(imageName); }
+  //   })
+  // })
+
+  
 
 app.listen(3001, () => {
     console.log("Konnichiwa");

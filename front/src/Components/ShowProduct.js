@@ -14,16 +14,16 @@ function ShowProduct(props) {
   const log = props.loggedIn;
 
     const [productList, setProductList] = useState([]);
-
+    
     useEffect(() => {
-Axios.post("http://localhost:3001/showProducts", {name : category,}).then((response) => {setProductList(response.data)});
-    })
+Axios.post("http://localhost:3001/showProducts", {name : category,}).then((response) => {setProductList(response.data)})
 
 
+// Axios.post("http://localhost:3001/showProductImage", {name : category,}).then((response) => {setImageUrl(response.data)})
+});
 
   return (
     <div className='CardPage'>
-      
         {
            productList && productList.length>0 &&  productList.map((val,key) => {
 

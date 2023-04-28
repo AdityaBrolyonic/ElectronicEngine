@@ -29,7 +29,7 @@ function Header({loggedIn, onLogout, name}) {
   return (
      <div className='Header'>
       
-     <Link className='HeadImage'>
+     <Link className='HeadImage' to='/'>
      <img src={logo} height="100%" width="100%" alt='logo'/>
      </Link>
 

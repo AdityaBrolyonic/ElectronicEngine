@@ -5,15 +5,14 @@ import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 import Axios from "axios";
-
+import mob from "../Images/mobilerealme.jpg";
 
 function ProductCard(props) {
 
-    const {P_Name,P_Price ,P_Image,P_Brand,P_Reviews,P_Quantity,P_Features,P_Description}= props.product
+    const {P_Name,P_Price,P_Brand,P_Image,P_Reviews,P_Quantity,P_Features,P_Description}= props.product
     const loggedIn = props.log;
+    // console.log(`${process.env.REACT_APP_IMAGE_PATH}${P_Image}`);
     Axios.defaults.withCredentials = true;
-
-    console.log(loggedIn);
   return (
 
     <div className='Card'>
@@ -22,7 +21,8 @@ function ProductCard(props) {
            (
         <div className='SImage'>
          <div className='Img'>
-            <img src={`${"../Images/"}${P_Image}`} height="100%" width="100%" alt='productImage'/>
+            <img src={mob} height="100%" width="100%" alt='productImage'/>
+            {/* <label className='DetHeading2'>{`${process.env.REACT_APP_IMAGE_PATH}${P_Image}`}</label> */}
             </div>
             <div className='Rate'> 
              <Box sx={{ '& > legend': { mt: 2 } }}>
@@ -38,7 +38,8 @@ function ProductCard(props) {
             :
             ( <div className='SImage'>
             <div className='Img'>
-               <img src={`${"../Images/"}${P_Image}`} height="100%" width="100%" alt='productImage'/>
+               {/* <img src={`${process.env.REACT_APP_IMAGE_PATH}${P_Image}`} height="100%" width="100%" alt='productImage'/> */}
+               <label className='DetHeading2'>{`${process.env.REACT_APP_IMAGE_PATH}${P_Image}`}</label> 
                </div>
                <div className='Rate'> 
                 <Box sx={{ '& > legend': { mt: 2 } }}>

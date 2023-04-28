@@ -25,7 +25,6 @@ function Collections() {
 <div className='icon2' onClick={() => handleClick("Mobile")}></div> 
 <div className='icon3' onClick={() => handleClick("Headphones")}></div>
 <div className='icon4' onClick={() => handleClick("Headphones")}></div>
-<div className='icon4' onClick={() => handleClick("Headphones")}></div> 
 
 </Fade>
   </div>

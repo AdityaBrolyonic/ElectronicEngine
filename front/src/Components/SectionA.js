@@ -18,7 +18,7 @@ function SectionA() {
       Choose From A Great Vareity
     </label>
     <IconButton>
-      <Link className="hbtn" to="/Product">Shop now</Link>
+      <Link className="hbtn" to="/Collection">Shop now</Link>
       </IconButton>
     </div>
     </Fade>
